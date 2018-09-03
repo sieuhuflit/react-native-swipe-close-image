@@ -2,7 +2,7 @@
 
 > Short blurb about what your product does.
 
-[![Test]['https://img.shields.io/badge/style-plastic-green.svg?longcache=true&style=plastic']][npm-url]
+[![Test][test-image']][test-url]
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
@@ -105,6 +105,8 @@ Sieu Thai – sieuhuflit@example.com
 
 <!-- Markdown link & img dfn's -->
 
+[test-image] : https://img.shields.io/badge/style-plastic-green.svg?longcache=true&style=plastic
+[test-url]: https://google.com
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/datadog-metrics
 [npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
