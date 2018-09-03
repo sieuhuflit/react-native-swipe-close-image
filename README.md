@@ -1,5 +1,13 @@
 # React native swipe close image
 
+> React native swipe to close image
+
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
+
+React native swipe to close image work on Android and iOS
+
 ![demo](https://github.com/sieuhuflit/react-native-swipe-close-image/blob/master/demo.gif)
 
 ## Installation
