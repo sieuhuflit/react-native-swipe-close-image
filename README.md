@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # :point_up_2: React native swipe close image
 
 ![Demo](https://imgur.com/a/94ewZye)
