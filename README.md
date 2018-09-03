@@ -2,10 +2,6 @@
 
 > Short blurb about what your product does.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
 One to two paragraph statement about your product and what it does.
 
 ![](https://github.com/sieuhuflit/react-native-swipe-close-image/blob/master/demo.gif)
@@ -101,13 +97,3 @@ const styles = StyleSheet.create({
 Sieu Thai – sieuhuflit@example.com
 
 [https://github.com/sieuhuflit](https://github.com/sieuhuflit/)
-
-<!-- Markdown link & img dfn's -->
-
-[test-image] : https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
-[test-url] : https://github.com/sieuhuflit/react-native-swipe-close-image
-[npm-image]: https://img.shields.io/badge/style-popout-green.svg?longCache=true&style=popout
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
