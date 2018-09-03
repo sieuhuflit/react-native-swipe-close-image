@@ -10,8 +10,6 @@ npm install react-native-swipe-close-image --save
 
 ## Example
 
-- In the example folder
-
 ### Code
 
 ```js
@@ -79,7 +77,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-[Example](./example/README.md)
+[Example](./example/index.js)
 
 ## Props
 
