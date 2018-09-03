@@ -1,4 +1,4 @@
-# :point_up_2: React native swipe close image
+# React native swipe close image
 
 ![demo](https://github.com/sieuhuflit/react-native-swipe-close-image/blob/master/demo.gif)
 
