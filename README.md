@@ -1,6 +1,6 @@
 # :point_up_2: React native swipe close image
 
-![Demo]([Imgur](https://i.imgur.com/VP0PvZZ.mp4))
+([Imgur](https://i.imgur.com/VP0PvZZ.mp4))
 
 ## Installation
 
