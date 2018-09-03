@@ -1,6 +1,6 @@
 # :point_up_2: React native swipe close image
 
-([Imgur](https://i.imgur.com/VP0PvZZ.mp4))
+![demo](https://github.com/sieuhuflit/react-native-swipe-close-image/blob/master/demo.gif)
 
 ## Installation
 
