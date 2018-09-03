@@ -1,20 +1,3 @@
-# :point_up_2: React native swipe close image
-
-![demo](https://github.com/sieuhuflit/react-native-swipe-close-image/blob/master/demo.gif)
-
-## Installation
-
-```
-npm install react-native-swipe-close-image --save
-```
-
-## Example
-
-- In the example folder
-
-### Code
-
-```js
 import React, { Component } from 'react';
 import {
   View,
@@ -23,7 +6,7 @@ import {
   Image,
   TouchableWithoutFeedback
 } from 'react-native';
-import SwipeCloseImage from 'react-native-swipe-close-image';
+import SwipeToClose from '../src/index';
 
 export default class App extends Component {
   constructor(props) {
@@ -57,7 +40,7 @@ export default class App extends Component {
             style={styles.imageStyle}
           />
         </TouchableWithoutFeedback>
-        <SwipeCloseImage
+        <SwipeToClose
           ref={c => (this.swipeToCloseRef = c)}
           imageSource={this.state.imageSource}
         />
@@ -77,19 +60,3 @@ const styles = StyleSheet.create({
     height: 200
   }
 });
-```
-
-[Example](./example/README.md)
-
-## Props
-
-| Prop            |      Default      |   Type   | Description                          |
-| :-------------- | :---------------: | :------: | :----------------------------------- |
-| resizeMode      |      Contain      | `string` | Resize mode for the image            |
-| backdropColor   | rgba(0,0,0,0.75)  | `string` | Backdrop color                       |
-| durationAnim    |        250        | `number` | Milisecond animation                 |
-| distanceDismiss | SCREEN_HEIGHT / 5 | `number` | Distance to auto dismiss close image |
-
-## Author
-
-Sieu Thai
