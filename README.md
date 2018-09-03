@@ -2,73 +2,106 @@
 
 > Short blurb about what your product does.
 
+[![Test]['https://img.shields.io/badge/style-plastic-green.svg?longcache=true&style=plastic']][npm-url]
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
 One to two paragraph statement about your product and what it does.
 
-![](header.png)
+![](https://github.com/sieuhuflit/react-native-swipe-close-image/blob/master/demo.gif)
 
 ## Installation
 
-OS X & Linux:
-
-```sh
-npm install my-crazy-module --save
+```
+npm install react-native-swipe-close-image --save
 ```
 
-Windows:
+## Example
 
-```sh
-edit autoexec.bat
+### Code
+
+```js
+import React, { Component } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableWithoutFeedback
+} from 'react-native';
+import SwipeCloseImage from 'react-native-swipe-close-image';
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imageSource: ''
+    };
+  }
+
+  onPressImage = () => {
+    this.swipeToCloseRef.onOpen(this.imageRef);
+    this.setState({
+      imageSource:
+        'https://facebook.github.io/react-native/docs/assets/favicon.png'
+    });
+  };
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <TouchableWithoutFeedback onPress={this.onPressImage}>
+          <Image
+            ref={c => {
+              this.imageRef = c;
+            }}
+            source={{
+              uri:
+                'https://facebook.github.io/react-native/docs/assets/favicon.png'
+            }}
+            resizeMode="contain"
+            style={styles.imageStyle}
+          />
+        </TouchableWithoutFeedback>
+        <SwipeCloseImage
+          ref={c => (this.swipeToCloseRef = c)}
+          imageSource={this.state.imageSource}
+        />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  imageStyle: {
+    width: 250,
+    height: 200
+  }
+});
 ```
 
-## Usage example
+[Example](./example/index.js)
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+## Props
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+| Prop            |      Default      |   Type   | Description                          |
+| :-------------- | :---------------: | :------: | :----------------------------------- |
+| resizeMode      |      Contain      | `string` | Resize mode for the image            |
+| backdropColor   | rgba(0,0,0,0.75)  | `string` | Backdrop color                       |
+| durationAnim    |        250        | `number` | Milisecond animation                 |
+| distanceDismiss | SCREEN_HEIGHT / 5 | `number` | Distance to auto dismiss close image |
 
-## Development setup
+## Author
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+Sieu Thai – sieuhuflit@example.com
 
-```sh
-make install
-npm test
-```
-
-## Release History
-
-- 0.2.1
-  - CHANGE: Update docs (module code remains unchanged)
-- 0.2.0
-  - CHANGE: Remove `setDefaultXYZ()`
-  - ADD: Add `init()`
-- 0.1.1
-  - FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-- 0.1.0
-  - The first proper release
-  - CHANGE: Rename `foo()` to `bar()`
-- 0.0.1
-  - Work in progress
-
-## Meta
-
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
-
-Distributed under the XYZ license. See `LICENSE` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-## Contributing
-
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
+[https://github.com/sieuhuflit](https://github.com/sieuhuflit/)
 
 <!-- Markdown link & img dfn's -->
 
