@@ -1,101 +1,80 @@
-# React native swipe close image
+# Product Name
 
-> React native swipe to close image
+> Short blurb about what your product does.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-React native swipe to close image work on Android and iOS
+One to two paragraph statement about your product and what it does.
 
-![demo](https://github.com/sieuhuflit/react-native-swipe-close-image/blob/master/demo.gif)
+![](header.png)
 
 ## Installation
 
-```
-npm install react-native-swipe-close-image --save
-```
+OS X & Linux:
 
-## Example
-
-### Code
-
-```js
-import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  TouchableWithoutFeedback
-} from 'react-native';
-import SwipeCloseImage from 'react-native-swipe-close-image';
-
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      imageSource: ''
-    };
-  }
-
-  onPressImage = () => {
-    this.swipeToCloseRef.onOpen(this.imageRef);
-    this.setState({
-      imageSource:
-        'https://facebook.github.io/react-native/docs/assets/favicon.png'
-    });
-  };
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <TouchableWithoutFeedback onPress={this.onPressImage}>
-          <Image
-            ref={c => {
-              this.imageRef = c;
-            }}
-            source={{
-              uri:
-                'https://facebook.github.io/react-native/docs/assets/favicon.png'
-            }}
-            resizeMode="contain"
-            style={styles.imageStyle}
-          />
-        </TouchableWithoutFeedback>
-        <SwipeCloseImage
-          ref={c => (this.swipeToCloseRef = c)}
-          imageSource={this.state.imageSource}
-        />
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  imageStyle: {
-    width: 250,
-    height: 200
-  }
-});
+```sh
+npm install my-crazy-module --save
 ```
 
-[Example](./example/index.js)
+Windows:
 
-## Props
+```sh
+edit autoexec.bat
+```
 
-| Prop            |      Default      |   Type   | Description                          |
-| :-------------- | :---------------: | :------: | :----------------------------------- |
-| resizeMode      |      Contain      | `string` | Resize mode for the image            |
-| backdropColor   | rgba(0,0,0,0.75)  | `string` | Backdrop color                       |
-| durationAnim    |        250        | `number` | Milisecond animation                 |
-| distanceDismiss | SCREEN_HEIGHT / 5 | `number` | Distance to auto dismiss close image |
+## Usage example
 
-## Author
+A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
-Sieu Thai
+_For more examples and usage, please refer to the [Wiki][wiki]._
+
+## Development setup
+
+Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+
+```sh
+make install
+npm test
+```
+
+## Release History
+
+- 0.2.1
+  - CHANGE: Update docs (module code remains unchanged)
+- 0.2.0
+  - CHANGE: Remove `setDefaultXYZ()`
+  - ADD: Add `init()`
+- 0.1.1
+  - FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
+- 0.1.0
+  - The first proper release
+  - CHANGE: Rename `foo()` to `bar()`
+- 0.0.1
+  - Work in progress
+
+## Meta
+
+Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+
+Distributed under the XYZ license. See `LICENSE` for more information.
+
+[https://github.com/yourname/github-link](https://github.com/dbader/)
+
+## Contributing
+
+1. Fork it (<https://github.com/yourname/yourproject/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+<!-- Markdown link & img dfn's -->
+
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[wiki]: https://github.com/yourname/yourproject/wiki
