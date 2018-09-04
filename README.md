@@ -2,8 +2,6 @@
 
 > A swipe close full screen image for Android and iOS
 
-One to two paragraph statement about your product and what it does.
-
 ![](https://github.com/sieuhuflit/react-native-swipe-close-image/blob/master/demo.gif)
 
 ## Installation
@@ -12,29 +10,37 @@ One to two paragraph statement about your product and what it does.
 npm install react-native-swipe-close-image --save
 ```
 
-## Example
+## Using
+
+- Create SwipeCloseImage in render() with imageSource is the source of image (Can be local or remote url link)
+
+```js
+import SwipeCloseImage from 'react-native-swipe-close-image';
+...
+render() {
+...
+<SwipeCloseImage
+  ref={c => (this.swipeToCloseRef = c)}
+  imageSource={this.state.imageSource}
+/>
+...
+}
+```
+
+- Then when want to open the image
+
+```js
+...
+this.swipeToCloseRef.onOpen(this.imageRef);
+...
+```
 
 ### Code
 
 ```js
-import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  TouchableWithoutFeedback
-} from 'react-native';
 import SwipeCloseImage from 'react-native-swipe-close-image';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      imageSource: ''
-    };
-  }
-
   onPressImage = () => {
     this.swipeToCloseRef.onOpen(this.imageRef);
     this.setState({
@@ -85,12 +91,14 @@ const styles = StyleSheet.create({
 
 ## Props
 
-| Prop            |      Default      |   Type   | Description                          |
-| :-------------- | :---------------: | :------: | :----------------------------------- |
-| resizeMode      |      Contain      | `string` | Resize mode for the image            |
-| backdropColor   | rgba(0,0,0,0.75)  | `string` | Backdrop color                       |
-| durationAnim    |        250        | `number` | Milisecond animation                 |
-| distanceDismiss | SCREEN_HEIGHT / 5 | `number` | Distance to auto dismiss close image |
+| Prop            |      Default      |      Type       | Description                                          |
+| :-------------- | :---------------: | :-------------: | :--------------------------------------------------- |
+| imageSource     |     required      | `string,number` | Link of the source url (Can be local or remote link) |
+| onOpen          |     required      |   `function`    | Function to open the image                           |
+| resizeMode      |      Contain      |    `string`     | Resize mode for the image                            |
+| backdropColor   | rgba(0,0,0,0.75)  |    `string`     | Backdrop color                                       |
+| durationAnim    |        250        |    `number`     | Milisecond animation                                 |
+| distanceDismiss | SCREEN_HEIGHT / 5 |    `number`     | Distance to auto dismiss close image                 |
 
 ## Author
 
