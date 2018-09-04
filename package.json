@@ -1,6 +1,6 @@
 {
   "name": "react-native-swipe-close-image",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A package for swipe to close image in React native",
   "main": "./src/index.js",
   "author": "SieuThai <sieuhuflit@gmail.com>",

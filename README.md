@@ -1,6 +1,6 @@
-# Product Name
+# React native swipe close image
 
-> Short blurb about what your product does.
+> A swipe close full screen image for Android and iOS
 
 One to two paragraph statement about your product and what it does.
 
